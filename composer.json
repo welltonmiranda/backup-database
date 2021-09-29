@@ -31,9 +31,8 @@
     },
     "prefer-stable": true,
     "scripts": {
-        "post-update-cmd": [
-            "php artisan optimize",
-            "php artisan migrate"
+        "post-package-install": [
+            "@php artisan migrate"
         ]
     }
 }
