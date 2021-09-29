@@ -18,14 +18,14 @@ php artisan vendor:publish --tag=backup-database-config
 ~~~
 ## Depois de instalado adicione as seguintes linhas no seu <code>app\Console\Kernel.php</code>
 ~~~
-// As tarefas falhas voltam para fila de hora em hora
-$schedule->command('queue:retry all')->hourly();
 $env = config('app.env');
 if (($env == 'local' AND config('backup_database.local')) OR ($env == 'production' AND config('backup_database.production'))):
   $schedule->command('backup:database')->{config('backup_database.schedule', 'hourly')}()->timezone('America/Sao_Paulo');
   $schedule->command('queue:work database --queue=high,backup-database --stop-when-empty --tries=' . config('backup_database.tries', '3') . ' --timeout=' . config('backup_database.timeout', '60'))->everyMinute()->timezone('America/Sao_Paulo');
   $schedule->command('remove:backup')->everyMinute()->timezone('America/Sao_Paulo');
 endif;
+// Opcional: As tarefas falhas voltam para fila de hora em hora
+$schedule->command('queue:retry all')->hourly();
 ~~~
 ## Local do arquivo de configuração <code>config\backup_database.php</code>
 ~~~
