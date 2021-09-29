@@ -1,0 +1,33 @@
+{
+    "name": "welltonmiranda/backup-database",
+    "description": "Gera backup do banco de dados e envia para: FTP, Digital Ocean Spaces ou E-mail",
+    "keywords": ["backup", "database", "banco-de-dados"],
+    "license": "MIT",
+    "authors": [{
+        "name": "Wellton Jorge de Miranda",
+        "email": "welltonmiranda@gmail.com"
+    }],
+    "require": {
+        "league/flysystem-aws-s3-v3": "^1.0",
+        "league/flysystem-sftp": "~1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "WelltonMiranda\\BackupDatabase\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "WelltonMiranda\\BackupDatabase\\ServiceProvider"
+            ]
+        }
+    },
+    "prefer-stable": true
+}
