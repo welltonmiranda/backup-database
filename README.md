@@ -5,7 +5,7 @@ composer require --with-all-dependencies welltonmiranda/backup-database
 ~~~
 ## Comandos necessários
 ~~~
-php php artisan queue:table
+php artisan queue:table
 ~~~
 ~~~
 php artisan queue:failed-table
