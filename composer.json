@@ -24,6 +24,10 @@
         }
     },
     "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
         "post-update-cmd": [
             "@php php artisan queue:table",
             "@php artisan queue:failed-table",
