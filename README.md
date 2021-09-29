@@ -24,3 +24,5 @@ if (($env == 'local' AND config('backup_database.local')) OR ($env == 'productio
   $schedule->command('queue:work database --queue=high,backup-database --stop-when-empty --tries=' . config('backup_database.tries', '3') . ' --timeout=' . config('backup_database.timeout', '60'))->everyMinute()->timezone('America/Sao_Paulo');
   $schedule->command('remove:backup')->everyMinute()->timezone('America/Sao_Paulo');
 endif;
+~~~
+## Local do arquivo de configuração <code>config\backup_database.php</code>
