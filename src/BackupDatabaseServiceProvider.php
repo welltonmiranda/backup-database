@@ -2,7 +2,9 @@
 
 namespace Welltonmiranda\BackupDatabase;
 
-class ServiceProvider extends \Illuminate\Support\ServiceProvider {
+use \Illuminate\Support\ServiceProvider;
+
+class BackupDatabaseServiceProvider extends ServiceProvider {
 
 	public function boot() {
 
@@ -14,8 +16,8 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider {
 
 		if ($this->app->runningInConsole()) {
 			$this->commands([
-				Welltonmiranda\BackupDatabase\App\Console\Commands\BackupDatabase::class,
-				Welltonmiranda\BackupDatabase\App\Console\Commands\RemoveDatabase::class,
+				App\Console\Commands\BackupDatabase::class,
+				App\Console\Commands\RemoveDatabase::class,
 			]);
 		}
 	}
