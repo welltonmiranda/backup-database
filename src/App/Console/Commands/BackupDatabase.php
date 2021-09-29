@@ -47,7 +47,7 @@ class BackupDatabase extends Command {
 		try {
 
 			/* Grava o registro de backup no banco de dados*/
-			$backup = new Welltonmiranda\BackupDatabase\App\Http\Models\BackupDatabase;
+			$backup = new \Welltonmiranda\BackupDatabase\App\Http\Models\BackupDatabase;
 			$backup->name = $this->name;
 			$backup->path = $this->path;
 			$backup->created_at = $this->created_at;
@@ -68,7 +68,7 @@ class BackupDatabase extends Command {
 				if ($plataform['disk'] == 'spaces' AND $plataform['active'] == true):
 
 					// Cria um job
-					Welltonmiranda\BackupDatabase\App\Jobs\Backup\Database::dispatch($backup, $plataform['disk'])
+					\Welltonmiranda\BackupDatabase\App\Jobs\Backup\Database::dispatch($backup, $plataform['disk'])
 						->onConnection('database')
 						->onQueue('backup-database');
 					// Fim Cria um job
@@ -83,7 +83,7 @@ class BackupDatabase extends Command {
 				if ($plataform['disk'] == 'ftp' AND $plataform['active'] == true):
 
 					// Cria um job
-					Welltonmiranda\BackupDatabase\App\Jobs\Backup\Database::dispatch($backup, $plataform['disk'])
+					\Welltonmiranda\BackupDatabase\App\Jobs\Backup\Database::dispatch($backup, $plataform['disk'])
 						->onConnection('database')
 						->onQueue('backup-database');
 					// Fim Cria um job

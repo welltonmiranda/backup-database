@@ -30,7 +30,7 @@ class Mail implements ShouldQueue {
 	 */
 	public function handle() {
 
-		\Mail::to($this->send_email)->send(new Welltonmiranda\BackupDatabase\App\Mail\Backup\Database($this->backup));
+		\Mail::to($this->send_email)->send(new \Welltonmiranda\BackupDatabase\App\Mail\Backup\Database($this->backup));
 
 	}
 }
