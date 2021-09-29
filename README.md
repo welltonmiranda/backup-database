@@ -27,8 +27,7 @@ endif;
 ~~~
 ## Local do arquivo de configuração <code>config\backup_database.php</code>
 
-<code>
-[
+return [
 	'local' => false,
 	'production' => true,
 	'schedule' => 'hourly', // everyMinute, everyFiveMinutes, everyTenMinutes, everyFifteenMinutes, everyThirtyMinutes, hourly, daily, weekly
@@ -72,4 +71,3 @@ endif;
 
 	],
 ];
-</code>
