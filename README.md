@@ -1,5 +1,6 @@
 # laravel-backup-database
 ## Instalação via composer
+~~~
 composer --with-all-dependencies require welltonmiranda/laravel-backup-database
 ## Comandos necessários
 php php artisan queue:table
