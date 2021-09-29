@@ -31,7 +31,7 @@
     },
     "prefer-stable": true,
     "scripts": {
-        "pre-install-cmd": [
+        "post-install-cmd": [
             "@php artisan migrate"
         ]
     }
