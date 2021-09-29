@@ -16,12 +16,6 @@
             "Welltonmiranda\\BackupDatabase\\": "src/"
         }
     },
-    "minimum-stability": "dev",
-    "config": {
-        "optimize-autoloader": true,
-        "preferred-install": "dist",
-        "sort-packages": true
-    },
     "extra": {
         "laravel": {
             "providers": [
@@ -29,11 +23,20 @@
             ]
         }
     },
-    "prefer-stable": true,
     "scripts": {
-        "post-autoload-dump": [
+        "post-update-cmd": [
+            "@php php artisan queue:table",
+            "@php artisan queue:failed-table",
             "@php artisan migrate --ansi",
             "@php artisan vendor:publish --tag=backup-database-config --ansi"
         ]
-    }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+
 }
