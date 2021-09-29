@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Jobs\Backup;
+namespace Welltonmiranda\BackupDatabase\App\Jobs\Backup;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -30,7 +30,7 @@ class Mail implements ShouldQueue {
 	 */
 	public function handle() {
 
-		\Mail::to($this->send_email)->send(new \App\Mail\Backup\Database($this->backup));
+		\Mail::to($this->send_email)->send(new Welltonmiranda\BackupDatabase\App\Mail\Backup\Database($this->backup));
 
 	}
 }

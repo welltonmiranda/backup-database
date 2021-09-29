@@ -26,7 +26,7 @@ class RemoveBackup extends Command {
 
 			$expire = date('Y-m-d H:i:s', strtotime('-' . config('backup_database.expire_days') . ' days'));
 
-			$backups = \App\Http\Models\BackupDatabase::where('created_at', '<', $expire)->get();
+			$backups = Welltonmiranda\BackupDatabase\Http\Models\BackupDatabase::where('created_at', '<', $expire)->get();
 
 			foreach ($backups as $backup):
 

@@ -29,5 +29,10 @@
             ]
         }
     },
-    "prefer-stable": true
+    "prefer-stable": true,
+    "scripts": {
+        "post-autoload-dump": [
+            "@php artisan package:migrate"
+        ]
+    }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Mail\Backup;
+namespace Welltonmiranda\BackupDatabase\App\Mail\Backup;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
