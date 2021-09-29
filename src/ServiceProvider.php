@@ -14,8 +14,8 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider {
 
 		if ($this->app->runningInConsole()) {
 			$this->commands([
-				Welltonmiranda\BackupDatabase\App\BackupDatabase::class,
-				Welltonmiranda\BackupDatabase\App\RemoveDatabase::class,
+				Welltonmiranda\BackupDatabase\App\Console\Commands\BackupDatabase::class,
+				Welltonmiranda\BackupDatabase\App\Console\Commands\RemoveDatabase::class,
 			]);
 		}
 	}
