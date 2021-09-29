@@ -12,7 +12,7 @@ class BackupDatabaseServiceProvider extends ServiceProvider {
 			__DIR__ . '/../config/backup_database.php' => config_path('backup_database.php'),
 		], 'backup-database-config');
 
-		$this->loadMigrationsFrom(__DIR__ . '/database/migrations');
+		$this->loadMigrationsFrom(__DIR__ . 'database/migrations');
 
 		if ($this->app->runningInConsole()) {
 			$this->commands([
