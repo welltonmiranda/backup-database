@@ -20,7 +20,7 @@ class BackupDatabase extends Command {
 
 		if (!file_exists(storage_path('app/backups'))):
 
-			$disk = Storage::build([
+			$disk = \Storage::build([
 				'driver' => 'local',
 				'root' => storage_path('app'),
 				'permissions' => [
