@@ -26,7 +26,7 @@ if (($env == 'local' AND config('backup_database.local')) OR ($env == 'productio
 endif;
 ~~~
 ## Local do arquivo de configuração <code>config\backup_database.php</code>
-
+~~~
 return [
 	'local' => false,
 	'production' => true,
@@ -71,3 +71,4 @@ return [
 
 	],
 ];
+~~~
