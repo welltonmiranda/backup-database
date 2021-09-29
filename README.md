@@ -11,10 +11,10 @@ php artisan queue:table
 php artisan queue:failed-table
 ~~~
 ~~~
-php artisan migrate --ansi
+php artisan migrate
 ~~~
 ~~~
-php artisan vendor:publish --tag=backup-database-config --ansi
+php artisan vendor:publish --tag=backup-database-config
 ~~~
 ## Depois de instalado adicione as seguintes linhas no seu <code>app\Console\Kernel.php</code>
 ~~~
