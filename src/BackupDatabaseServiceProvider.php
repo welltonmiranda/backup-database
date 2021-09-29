@@ -17,7 +17,7 @@ class BackupDatabaseServiceProvider extends ServiceProvider {
 		if ($this->app->runningInConsole()) {
 			$this->commands([
 				App\Console\Commands\BackupDatabase::class,
-				App\Console\Commands\RemoveDatabase::class,
+				App\Console\Commands\RemoveBackup::class,
 			]);
 		}
 	}
