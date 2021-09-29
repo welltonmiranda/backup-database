@@ -101,7 +101,7 @@ class BackupDatabase extends Command {
 
 					foreach ($emails as $email):
 
-						\Welltonmiranda\BackupDatabase\App\Mail\Backup\Database::dispatch($backup, $email)
+						\Welltonmiranda\BackupDatabase\App\Jobs\Backup\Mail::dispatch($backup, $email)
 							->onConnection('database')
 							->onQueue('backup-database');
 
