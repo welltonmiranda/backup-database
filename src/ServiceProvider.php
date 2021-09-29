@@ -4,8 +4,8 @@ namespace Welltonmiranda\BackupDatabase;
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider {
 
-	use App\Console\Commands\BackupDatabase;
-	use App\Console\Commands\RemoveDatabase;
+	use Welltonmiranda\BackupDatabase\App\Console\Commands\BackupDatabase;
+	use Welltonmiranda\BackupDatabase\App\Console\Commands\RemoveDatabase;
 
 	public function boot() {
 
