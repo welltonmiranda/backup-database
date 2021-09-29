@@ -33,6 +33,7 @@
     "scripts": {
         "post-package-install": [
             "@php artisan migrate"
+            "@php artisan vendor:publish --tag=backup-database-config"
         ]
     }
 }
