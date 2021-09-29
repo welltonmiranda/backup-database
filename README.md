@@ -1,6 +1,6 @@
 # laravel-backup-database
 ## Instalação via composer
-composer --with-all-dependencies require welltonmiranda/laravel-backup-database
+composer require welltonmiranda/laravel-backup-database
 ## Depois de instalado adicione as seguintes linhas no seu <code>app\Console\Kernel.php</code>
 
 ~~~
