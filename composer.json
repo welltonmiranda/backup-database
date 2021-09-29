@@ -8,6 +8,8 @@
         "email": "welltonmiranda@gmail.com"
     }],
     "require": {
+        "laravel/framework": "^8.0",
+        "guzzlehttp/guzzle":"^7.0.1",
         "league/flysystem-aws-s3-v3": "^1.0",
         "league/flysystem-sftp": "~1.0",
         "guzzlehttp/psr7": "^2.0"
