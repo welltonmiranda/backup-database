@@ -4,7 +4,7 @@ namespace Welltonmiranda\BackupDatabase;
 
 use \Illuminate\Support\ServiceProvider;
 
-class BackupDatabaseProvider extends ServiceProvider {
+class BackupDatabaseServiceProvider extends ServiceProvider {
 
 	public function boot() {
 
