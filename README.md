@@ -2,10 +2,15 @@
 ## Instalação via composer
 ~~~
 composer --with-all-dependencies require welltonmiranda/laravel-backup-database
+~~~
 ## Comandos necessários
+~~~
 php php artisan queue:table
+~~~
 php artisan queue:failed-table
+~~~
 php artisan migrate --ansi
+~~~
 php artisan vendor:publish --tag=backup-database-config --ansi
 
 ## Depois de instalado adicione as seguintes linhas no seu <code>app\Console\Kernel.php</code>
