@@ -1,6 +1,6 @@
 <?php
 
-namespace WelltonMiranda\BackupDatabase;
+namespace Welltonmiranda\BackupDatabase;
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider {
 
