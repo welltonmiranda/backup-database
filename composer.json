@@ -25,7 +25,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Welltonmiranda\\BackupDatabase\\BackupDatabaseServiceProvider"
+                "Welltonmiranda\\BackupDatabase\\Providers\\BackupDatabaseServiceProvider"
             ]
         }
     },
