@@ -3,23 +3,23 @@
 ~~~
 composer require --with-all-dependencies welltonmiranda/backup-database
 ~~~
-## Cria o tabela de "jobs", caso ocorra algum erro, este arquivo já deve existir na sua instalação
+### Cria o arquivo de migration "jobs", caso ocorra algum erro, este arquivo já deve existir na sua instalação
 ~~~
 php artisan queue:table
 ~~~
-## Cria o tabela de "failed_jobs", caso ocorra algum erro, este arquivo já deve existir na sua instalação
+### Cria o arquivo de migration "failed_jobs", caso ocorra algum erro, este arquivo já deve existir na sua instalação
 ~~~
 php artisan queue:failed-table
 ~~~
-## Executa a criação das tabelas "jobs", "failed_jobs" e "backup_database"
+### Executa a criação das tabelas "jobs", "failed_jobs" e "backup_database"
 ~~~
 php artisan migrate
 ~~~
-## Cria o arquivo de configuração <code>config\backup_database.php</code>, caso ocorra algum erro, este arquivo já deve existir na sua instalação
+### Cria o arquivo de configuração <code>config\backup_database.php</code>, caso ocorra algum erro, este arquivo já deve existir na sua instalação
 ~~~
 php artisan vendor:publish --tag=backup-database-config
 ~~~
-## Depois de instalado adicione as seguintes linhas no seu <code>app\Console\Kernel.php</code>
+### Depois de instalado adicione as seguintes linhas no seu <code>app\Console\Kernel.php</code>
 ~~~
 $env = config('app.env');
 if (($env == 'local' AND config('backup_database.local')) OR ($env != 'local' AND config('backup_database.production'))):
@@ -30,7 +30,7 @@ endif;
 // Opcional: As tarefas falhas voltam para fila de hora em hora
 $schedule->command('queue:retry all')->hourly();
 ~~~
-## Local do arquivo de configuração <code>config\backup_database.php</code>
+### Local do arquivo de configuração <code>config\backup_database.php</code>
 ~~~
 return [
 	'local' => false, // Habilita/desabilita no modo desenvolvimento
