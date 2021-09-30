@@ -3,15 +3,15 @@
 ~~~
 composer require --with-all-dependencies welltonmiranda/backup-database
 ~~~
-## Cria o tabela de jobs, caso ocorra algum erro, este arquivo já deve existir na sua instalação
+## Cria o tabela de "jobs", caso ocorra algum erro, este arquivo já deve existir na sua instalação
 ~~~
 php artisan queue:table
 ~~~
-## Cria o tabela de jobs_faileds, caso ocorra algum erro, este arquivo já deve existir na sua instalação
+## Cria o tabela de "failed_jobs", caso ocorra algum erro, este arquivo já deve existir na sua instalação
 ~~~
 php artisan queue:failed-table
 ~~~
-## Executa a criação das tabelas inexistentes
+## Executa a criação das tabelas "jobs", "failed_jobs" e "backup_database"
 ~~~
 php artisan migrate
 ~~~
