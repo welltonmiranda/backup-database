@@ -3,23 +3,26 @@
 ~~~
 composer require --with-all-dependencies welltonmiranda/backup-database
 ~~~
-## Comandos necessários
+## Cria o tabela de jobs, caso ocorra algum erro, este arquivo já deve existir na sua instalação
 ~~~
 php artisan queue:table
 ~~~
+## Cria o tabela de jobs_faileds, caso ocorra algum erro, este arquivo já deve existir na sua instalação
 ~~~
 php artisan queue:failed-table
 ~~~
+## Executa a criação das tabelas inexistentes
 ~~~
 php artisan migrate
 ~~~
+## Cria o arquivo de configuração <code>config\backup_database.php</code>, caso ocorra algum erro, este arquivo já deve existir na sua instalação
 ~~~
 php artisan vendor:publish --tag=backup-database-config
 ~~~
 ## Depois de instalado adicione as seguintes linhas no seu <code>app\Console\Kernel.php</code>
 ~~~
 $env = config('app.env');
-if (($env == 'local' AND config('backup_database.local')) OR ($env == 'production' AND config('backup_database.production'))):
+if (($env == 'local' AND config('backup_database.local')) OR ($env != 'local' AND config('backup_database.production'))):
   $schedule->command('backup:database')->{config('backup_database.schedule', 'hourly')}()->timezone('America/Sao_Paulo');
   $schedule->command('queue:work database --queue=high,backup-database --stop-when-empty --tries=' . config('backup_database.tries', '3') . ' --timeout=' . config('backup_database.timeout', '60'))->everyMinute()->timezone('America/Sao_Paulo');
   $schedule->command('remove:backup')->everyMinute()->timezone('America/Sao_Paulo');
