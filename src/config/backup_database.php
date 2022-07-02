@@ -6,7 +6,7 @@ return [
 	'schedule' => 'hourly', // Opções configuráveis: everyMinute, everyFiveMinutes, everyTenMinutes, everyFifteenMinutes, everyThirtyMinutes, hourly, daily, weekly
 	'tries' => '3', // Tentativas
 	'timeout' => '60', // Tempo limite
-	'expire_days' => '3', // Tem para os arquivos expirar e serem excluídos
+	'expire_days' => '3', // Tempo para os arquivos expirar e serem excluídos
 	'plataforms' => [
 
 		[
