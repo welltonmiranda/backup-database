@@ -1,5 +1,5 @@
 {
-    "name": "WelltonMiranda/backup-database",
+    "name": "welltonmiranda/backup-database",
     "description": "Gera backup do banco de dados e envia para: FTP, Digital Ocean Spaces ou E-mail",
     "keywords": ["backup", "database", "banco-de-dados"],
     "license": "MIT",
