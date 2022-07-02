@@ -5,7 +5,7 @@
     "license": "MIT",
     "authors": [{
         "name": "Wellton Jorge de Miranda",
-        "email": "WelltonMiranda@gmail.com"
+        "email": "welltonmiranda@gmail.com"
     }],
     "require": {
         "php": "^7.3|^8.0",
