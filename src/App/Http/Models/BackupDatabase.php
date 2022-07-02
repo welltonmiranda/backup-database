@@ -1,6 +1,6 @@
 <?php
 
-namespace Welltonmiranda\BackupDatabase\App\Http\Models;
+namespace WelltonMiranda\BackupDatabase\App\Http\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

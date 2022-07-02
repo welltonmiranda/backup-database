@@ -1,11 +1,11 @@
 {
-    "name": "welltonmiranda/backup-database",
+    "name": "WelltonMiranda/backup-database",
     "description": "Gera backup do banco de dados e envia para: FTP, Digital Ocean Spaces ou E-mail",
     "keywords": ["backup", "database", "banco-de-dados"],
     "license": "MIT",
     "authors": [{
         "name": "Wellton Jorge de Miranda",
-        "email": "welltonmiranda@gmail.com"
+        "email": "WelltonMiranda@gmail.com"
     }],
     "require": {
         "php": "^7.3|^8.0",
@@ -15,13 +15,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Welltonmiranda\\BackupDatabase\\": "src/"
+            "WelltonMiranda\\BackupDatabase\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Welltonmiranda\\BackupDatabase\\Providers\\BackupDatabaseServiceProvider"
+                "WelltonMiranda\\BackupDatabase\\Providers\\BackupDatabaseServiceProvider"
             ]
         }
     },

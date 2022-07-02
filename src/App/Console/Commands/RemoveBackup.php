@@ -1,6 +1,6 @@
 <?php
 
-namespace Welltonmiranda\BackupDatabase\App\Console\Commands;
+namespace WelltonMiranda\BackupDatabase\App\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Storage;
@@ -26,7 +26,7 @@ class RemoveBackup extends Command {
 
 			$expire = date('Y-m-d H:i:s', strtotime('-' . config('backup_database.expire_days') . ' days'));
 
-			$backups = \Welltonmiranda\BackupDatabase\App\Http\Models\BackupDatabase::where('created_at', '<', $expire)->get();
+			$backups = \WelltonMiranda\BackupDatabase\App\Http\Models\BackupDatabase::where('created_at', '<', $expire)->get();
 
 			foreach ($backups as $backup):
 

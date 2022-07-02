@@ -1,6 +1,6 @@
 <?php
 
-namespace Welltonmiranda\BackupDatabase\App\Jobs\Backup;
+namespace WelltonMiranda\BackupDatabase\App\Jobs\Backup;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
